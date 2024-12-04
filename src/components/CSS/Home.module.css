@@ -1,0 +1,277 @@
+/* Contêiner principal */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 250px;
+    background-color: #1e1e2f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.navItem:hover {
+    background-color: #343446;
+}
+
+.navItem img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.navItem span {
+    font-size: 16px;
+}
+
+/* Cabeçalho */
+.header {
+    width: calc(100% - 250px);
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e6e6e6;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100vw;
+}
+
+.logo {
+    width: 150px;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 22px;
+    color: #555;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #1e88e5;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.userName {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #333;
+}
+
+.profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+.arrowDown {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Dropdown Card */
+.dropdownCard {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    z-index: 20;
+}
+
+.cardOption {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cardOption:hover {
+    background-color: #f5f5f5;
+}
+
+/* Conteúdo principal */
+.mainContent {
+    width: calc(100% - 250px);
+    margin-left: 150px;
+    padding: 80px 20px 20px;
+    overflow-y: auto;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.searchBar img {
+    width: 24px;
+    height: 24px;
+    margin-right: 20x;
+}
+
+.searchBar input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Postagens */
+.postagens {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cardPostagem {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.postProfessorFoto {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.cardHeader h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.postContent {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.postImage {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.postDate {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.cardButtonsContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.cardButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.cardButton:hover {
+    color: #1e88e5;
+}
+
+/* Comentários */
+.comentarios {
+    margin-top: 10px;
+    border-top: 1px solid #e6e6e6;
+    padding-top: 10px;
+}
+
+.comentario {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.comentario span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #1e88e5;
+}
+
+button {
+    background-color: #1e88e5;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1668b3;
+}

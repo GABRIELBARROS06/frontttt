@@ -1,0 +1,99 @@
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.backButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.backButton:hover {
+  background-color: #0056b3;
+}
+
+.modules {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.moduleButton {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.moduleButton.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #0056b3;
+}
+
+.lessonsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 300px 300px; /* 3 linhas com 300px de altura */
+  gap: 20px 100px;
+}
+
+.lessonCard {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 95%;
+  height: 95%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lessonCard:hover {
+  height: 100%; /* Altura ao passar o mouse */
+  width: 100%;
+  transition: ease-in 0.2s;
+}
+
+.lessonImage {
+  width: 100%;
+  min-height: 95%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.lessonDetails {
+  height: 10%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.lessonDetails h4 {
+  font-size: 1rem
+}
+
+.noLessons {
+  text-align: center;
+  color: #777;
+}

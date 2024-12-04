@@ -1,0 +1,33 @@
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .nomeProfessor {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .dataPostagem {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  
+  .conteudo {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+  }
+  
