@@ -2,8 +2,10 @@ import { useState, useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../../context/AppContext';
 import React from 'react';
-import { FiSettings, FiBell, FiChevronDown } from 'react-icons/fi';
-import { FaHeart, FaComment } from 'react-icons/fa';
+import { AiOutlineSetting, AiOutlineHeart } from 'react-icons/ai';
+import { MdOutlineNotificationsActive } from 'react-icons/md';
+import { RiArrowDropDownLine } from 'react-icons/ri';
+import { BiComment } from 'react-icons/bi';
 import styles from '../CSS/Home.module.css';
 import logo from '../../img/logoGrande.png';
 import chat from '../../img/chat.png';
@@ -81,8 +83,8 @@ function Home() {
             <header className={styles.header}>
                 <img src={logo} alt="Logo SinaLibras" className={styles.logo} />
                 <div className={styles.headerRight}>
-                    <FiSettings className={styles.icon} onClick={() => navigate('/Configuracoes')} />
-                    <FiBell className={styles.icon} />
+                    <AiOutlineSetting className={styles.icon} onClick={() => navigate('/Configuracoes')} />
+                    <MdOutlineNotificationsActive className={styles.icon} />
                     <div className={styles.userInfo}>
                         <span className={styles.userName}>{dados?.nome || 'Usuário'}</span>
                         <img
@@ -91,7 +93,7 @@ function Home() {
                             onClick={() => navigate('/Perfil')}
                             className={styles.profileImage}
                         />
-                        <FiChevronDown className={styles.arrowDown} onClick={() => setCardVisible((prev) => !prev)} />
+                        <RiArrowDropDownLine className={styles.arrowDown} onClick={() => setCardVisible((prev) => !prev)} />
                     </div>
                 </div>
             </header>
@@ -141,8 +143,8 @@ function Home() {
                             {postagem.foto && <img src={postagem.foto} alt="Imagem da postagem" className={styles.postImage} />}
                             <span className={styles.postDate}>{new Date(postagem.data).toLocaleDateString()}</span>
                             <div className={styles.cardButtonsContainer}>
-                                <button className={styles.cardButton}><FaHeart /></button>
-                                <button className={styles.cardButton} onClick={() => setComentarioAberto(postagem.id)}><FaComment /></button>
+                                <button className={styles.cardButton}><AiOutlineHeart /></button>
+                                <button className={styles.cardButton} onClick={() => setComentarioAberto(postagem.id)}><BiComment /></button>
                             </div>
                             {comentarioAberto === postagem.id && (
                                 <div className={styles.comentarios}>

@@ -1,128 +1,189 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-
+/* Layout geral */
 .container {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: linear-gradient(to bottom,  #C7E2FE 50%, #1B8BFF 100%);
-  font-family: 'Inter', sans-serif;
-  height: 100vh;
-  width: 100vw;
-}
-
-.mainVideo {
-  width: 70%;
-  height: 100%;
-  background-color: red;
-}
-
-.mainVideo h1 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #22367C;
-}
-
-.videoContainer {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio */
-  overflow: hidden;
-  border-radius: 24px;
-}
-
-.videoContainer video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.professorInfo {
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.professorAvatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-  background-image: url(https://yt3.googleusercontent.com/9Tq6Ax84r9nnq_CaIXbhrh7EcUk3k2Xq6mxO6iyl1jrC3hMt7DdTtQcVgyl2Csp0C2giVb2r=s160-c-k-c0x00ffffff-no-rj);
-  background-position: center;
-  background-size: cover;
-  cursor: pointer;
-}
-
-.date{
-  text-align: center;
-  display: flex;
   justify-content: center;
-  width: 80px;
-  height: 50px;
-  background-color: #F7F2EB;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, #74b9ff, #0984e3);
+  padding: 20px;
+}
+
+.videoCard {
+  position: relative;
+  background: #ffffff;
   border-radius: 16px;
-  font-family:"Inter", sans-serif;
-  font-weight: 800;
-  color: #081F5C;
-  position: absolute;
-  left: 65%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
 
-.professorDetails {
-  display: flex;
-  flex-direction: column;
-  color: #FFFFFF;
-  cursor: pointer;
+/* Comentários */
+.commentSection {
+  margin-top: 30px;
+  text-align: left;
 }
 
-.dot{
-  width: 13px;
-  height: 13px;
-  background-color: #22367C;
-  border-radius: 50%;
-  position: absolute;
-  left: 5%;
-  margin-top: 3%;
-  
-}
-.labelProfessor {
-  background-color: #F7F2EB;
-  color: #081F5C;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  text-align: right;
-  border-radius:16px ;
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
+.commentTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2d3436;
 }
 
-.videoThumbnails {
-  width: 25%;
+.commentCard {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  cursor: pointer;
-  
 }
 
-.thumbnailCard {
+.commentInput {
   width: 100%;
-  padding-top: 56.25%;
-  position: relative;
+  min-height: 80px;
+  padding: 10px;
+  border: 1px solid #b2bec3;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2d3436;
+  resize: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.commentInput:focus {
+  outline: none;
+  border-color: #0984e3;
+}
+
+.commentButton {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background: #0984e3;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.commentButton:hover {
+  background: #74b9ff;
+}
+
+/* Restante do CSS */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom, #74b9ff, #0984e3);
+  padding: 20px;
+}
+
+.videoCard {
+  position: relative; /* Necessário para posicionar a data no canto */
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Título */
+.title {
+  font-size: 24px;
+  font-weight: bold; /* Deixa o título mais destacado */
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Todas as letras em maiúsculas */
+  letter-spacing: 2px; /* Espaçamento extra entre letras */
+  background: linear-gradient(to right, #fd79a8, #00cec9); /* Gradiente vibrante */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #2d3436; /* Fallback para navegadores sem suporte */
+}
+
+/* Informações do professor */
+.professorInfo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  margin-bottom: 20px;
+}
+
+.professorAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid #0984e3;
+}
+
+.professorDetails {
+  text-align: left;
+}
+
+.professorName {
+  font-size: 18px;
+  font-weight: bold; /* Negrito para destaque */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+  background: linear-gradient(to right, #0984e3, #6c5ce7); /* Gradiente moderno */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #2d3436; /* Fallback */
+}
+
+.professorRole {
+  font-size: 14px;
+  color: #636e72;
+  font-weight: bold; /* Deixa o texto mais destacado */
+  text-transform: uppercase; /* Torna todas as letras maiúsculas */
+  letter-spacing: 1px; /* Adiciona espaçamento entre as letras */
+  background: linear-gradient(to right, #6c5ce7, #00cec9); /* Gradiente no texto */
+  -webkit-background-clip: text; /* Faz o gradiente aparecer apenas no texto */
+  -webkit-text-fill-color: transparent; /* Garante que o texto tenha preenchimento transparente */
+}
+/* Data no canto inferior direito */
+.date {
+  font-size: 12px;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: bold; /* Deixa a data mais legível */
+  text-align: right; /* Alinha à direita */
+  background: linear-gradient(to right, #ff7675, #fdcb6e); /* Gradiente quente */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #b2bec3; /* Fallback */
+}
+
+/* Vídeo */
+.videoContainer {
+  margin: 20px 0;
+}
+
+.videoPlayer {
+  width: 100%;
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 24px;
-  cursor: pointer;
 }
 
-.thumbnailCard video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+/* Descrição */
+.description {
+  font-size: 16px;
+  color: #2d3436;
+  line-height: 1.5;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Erro */
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: #d63031;
 }

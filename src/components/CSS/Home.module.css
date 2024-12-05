@@ -67,7 +67,7 @@
 }
 
 .icon {
-    font-size: 22px;
+    font-size: 24px; /* Aumentado para combinar com os novos ícones */
     color: #555;
     margin-right: 15px;
     cursor: pointer;
@@ -219,13 +219,14 @@
 .cardButton {
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 22px; /* Tamanho para novos ícones */
+    color: #555;
     cursor: pointer;
-    color: #666;
-    transition: color 0.3s;
+    transition: transform 0.2s, color 0.3s;
 }
 
 .cardButton:hover {
+    transform: scale(1.1);
     color: #1e88e5;
 }
 
